@@ -36,12 +36,9 @@ class WindowPaths
 			{
 				var bitmap = BitmapData.fromFile(path);
 				var newGraphic:FlxGraphic;
-				else
-				{
-					newGraphic = FlxGraphic.fromBitmapData(bitmap, false, key, false);
-					trace('new bitmap $key, not textured');
-					trace(library);
-				}
+				newGraphic = FlxGraphic.fromBitmapData(bitmap, false, key, false);
+				trace('new bitmap $key, not textured');
+				trace(library);
 				currentTrackedAssets.set(key, newGraphic);
 			}
 			localTrackedAssets.push(key);
