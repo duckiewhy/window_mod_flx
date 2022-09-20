@@ -58,8 +58,8 @@ class WindowPaths
 		return getPath(file, type);
 	}
 
-	inline static public function image(key:String, ?library:String, ?textureCompression:Bool = false) {
-		var returnAsset:FlxGraphic = returnGraphic(key, library, textureCompression);
+	inline static public function image(key:String, ?library:String) {
+		var returnAsset:FlxGraphic = returnGraphic(key, library);
 		return returnAsset;
 	}
 }
