@@ -6,24 +6,10 @@ import flixel.FlxSprite;
 import flixel.util.FlxColor;
 import lime.ui.WindowAttributes;
 import lime.app.Application;
-import lime.graphics.RenderContext;
-import lime.ui.MouseButton;
-import lime.ui.KeyCode;
-import lime.ui.KeyModifier;
 import lime.ui.Window;
 import openfl.geom.Matrix;
-import openfl.geom.Rectangle;
 import openfl.display.Sprite;
-import openfl.display.BitmapData;
-import openfl.utils.Assets;
-import flixel.FlxG;
-import openfl.system.System;
-import flixel.graphics.FlxGraphic;
-import openfl.utils.AssetType;
-import openfl.utils.Assets as OpenFlAssets;
-import lime.utils.Assets;
-import sys.io.File;
-import sys.FileSystem;
+
 import window.windowMod.WindowPaths;
 
 class FlxWindowModifier 
@@ -32,7 +18,7 @@ class FlxWindowModifier
     public static var popupwindow:Window;
     public static var windowSprite:Sprite;
 
-    public static function changeWinPos(X:Int, Y:Int, type:String)
+    public static function changeWinPos(X:Int, Y:Int, type:String):Void
     {
         //basically, run this function of changeWinPos() with the desired change in X and Y to the main window
         switch(type){
@@ -45,21 +31,21 @@ class FlxWindowModifier
         }
     }
 
-    public static function setWinPos(X:Int, Y:Int)
+    public static function setWinPos(X:Int, Y:Int):Void
     {
         //Run this function of setWinPos() to SET the window position, not add to it
             Application.current.window.x = X;
             Application.current.window.y = Y;
     }
 
-    public static function changeWinDimension(Width:Int, Height:Int)
+    public static function changeWinDimension(Width:Int, Height:Int):Void
     {
         //Run the function of changeWinDimension() to set the width and height of the window!
             Application.current.window.width = Width;
             Application.current.window.height = Height;
     }
 
-    public static function popUpWindow(attributes:WindowAttributes, color:FlxColor, X:Int, Y:Int, spritePath:String)
+    public static function popUpWindow(attributes:WindowAttributes, color:FlxColor, X:Int, Y:Int, spritePath:String):Void
     {
         popupwindow = Lib.application.createWindow(attributes);
         popupwindow.stage.color = color;
@@ -76,7 +62,7 @@ class FlxWindowModifier
         popupwindow.stage.addChild(spr);
     }
 
-    public static function getWinTrans()
+    public static function getWinTrans():Void
     {
         /**
         * The function is defined in the `TransparencyFunc` class below
@@ -103,10 +89,7 @@ class TransparencyFunc
             SetLayeredWindowAttributes(hWnd, RGB(1, 1, 1), 0, LWA_COLORKEY);
         }
     ')
-	public static function getWindowsTransparent(res:Int = 0)
-	{
-		return res;
-	}
+	public static function getWindowsTransparent(res:Int = 0):Void {}
 
 	@:functionCode('
         HWND hWnd = GetActiveWindow();
@@ -116,8 +99,9 @@ class TransparencyFunc
             SetLayeredWindowAttributes(hWnd, RGB(1, 1, 1), 1, LWA_COLORKEY);
         }
     ')
-	public static function getWindowsbackward(res:Int = 0)
-	{
-		return res;
-	}
+	public static function getWindowsBackward(res:Int = 0):Void {}
+
+    @:deprecated("getWindowsbackward is deprecated. Use getWindowsBackward instead.")
+	public static function getWindowsbackward(res:Int = 0):Void {getWindowsBackward(res);}
+
 }
