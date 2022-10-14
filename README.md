@@ -4,11 +4,12 @@ This is a haxelib for modifying the main window in HaxeFlixel!
 I am gonna be working to add popups and whatnot, but for now you have the basics!
 
 ## Credits:
-* [DuskieWhy] (https://twitter.com/DuskieWhy)
-* [TaeYai] (https://twitter.com/TaeYai)
-* [BreezyMelee] (https://twitter.com/BreezyMelee)
-* [YoshiCrafter] (https://twitter.com/YoshiCrafter29) - Additional help
-* [KadeDev] (https://twitter.com/kade0912) - Transparent window .hx file code
+* [DuskieWhy](https://twitter.com/DuskieWhy)
+* [TaeYai](https://twitter.com/TaeYai)
+* [BreezyMelee](https://twitter.com/BreezyMelee)
+* [YoshiCrafter29](https://twitter.com/YoshiCrafter29) - Additional help
+* [KadeDev](https://twitter.com/kade0912) - Transparent window .hx file code
+* [sayofthelor](https://twitter.com/sayofthelor) - Additional code cleanup
 
 # Set-up
 First, git the haxelib by pasting this command into the cmd or powershell.
