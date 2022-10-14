@@ -2,8 +2,13 @@
     "name": "window_mod_flx",
     "url": "https://github.com/DuskieWhy/window_mod_flx",
     "license": "MIT",
-    "version": "0.0.0",
-    "description": "Modifiers for windows in HaxeFlixel!",
-    "releasenote": "",
-    "contributors": ["DuskieWhy", "TaeYai", "BreezyMelee", "KadeDev", "YoshiCrafter"]
+    "version": "1.0.0",
+    "description": "Modifiers for windows in HaxeFlixel",
+    "releasenote": "Initial release",
+    "dependencies": {
+        "flixel":"",
+        "openfl":"",
+        "lime":""
+    },
+    "contributors": ["DuskieWhy", "TaeYai", "BreezyMelee", "KadeDev", "YoshiCrafter29", "sayofthelor"]
 }  
